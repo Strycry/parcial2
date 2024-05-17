@@ -8,7 +8,8 @@ import { PinguinoListComponent } from './pinguino-list/pinguino-list.component';
   imports: [
     CommonModule
   ],
-  declarations: [PinguinoComponent, PinguinoDetailComponent, PinguinoListComponent],
-  exports:[PinguinoListComponent]
+  exports:[PinguinoListComponent],
+  declarations: [PinguinoComponent, PinguinoDetailComponent, PinguinoListComponent]
+  
 })
 export class PinguinoModule { }
