@@ -1,0 +1,47 @@
+<nav class="navbar bg-body-tertiary" data-bs-theme="dark" >
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="De photo from US National Oceanic and Atmospheric Administration - www.noaa.gov, Dominio público, https://commons.wikimedia.org/w/index.php?curid=64629" alt="Bootstrap" width="30" height="24">
+    </a>
+    <a class="navbar-brand" id="texto" href="#">MayorEspecie : {{mayorEspecie}}</a>
+  </div>
+</nav>
+<div class="container">
+<div class="row">
+  <div class="col-6"></div>
+  <div class="col-3" id="aa"><h1> PINGUINOS </h1></div>
+  <div class="col-3"></div>
+</div>
+</div>
+
+
+<div class="container">
+<div   *ngFor="let pinguino of pinguinos" class="card mb-3" style="max-width: 540px;">
+  <div class="row">
+    <div class="col-md-4">
+      <img src="{{pinguino.image}}  " class="img-fluid rounded-start" alt="" (click)="selected(pinguino)" >
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">  {{pinguino.nombre}} </h5>
+        <p class="text-truncate"> {{pinguino.description}} </p>
+        <p class="card-text"><small class="text-body-secondary"> {{pinguino.scientific_name}} </small></p>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="col">
+    <div   *ngIf="select">
+      <app-pinguino-detail [pinguinoDetail]="pinguino"  ></app-pinguino-detail> 
+    </div>  
+  </div>
+</div>
+<style>
+  #texto{
+    color: rgb(20, 13, 59);
+  }
+  #aa{
+    color: #fffafa;
+  }
+</style>
+  
